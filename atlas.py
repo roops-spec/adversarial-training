@@ -4,7 +4,6 @@ from datetime import datetime
 from groq import Groq
 from dotenv import load_dotenv
 
-# Load the API Key from .env
 load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
