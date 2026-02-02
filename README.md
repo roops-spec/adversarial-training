@@ -2,11 +2,17 @@
 
 This project explores adversarial machine learning techniques using the Groq API.
 
-## References & Research
-This project is based on the methodologies discussed in:
-* **Paper:** [Explaining and Harnessing Adversarial Examples](https://arxiv.org/abs/1412.6572)
-* **Authors:** Ian J. Goodfellow, Jonathon Shlens, Christian Szegedy
-* **Key Concept:** The Fast Gradient Sign Method (FGSM), which I used to generate adversarial perturbations in this repository.
+## Methodology: Red Teaming
+This project implements a manual Red Teaming framework to evaluate the robustness of `llama-3.1-8b-instant`. 
+
+### Features
+- **Adversarial Probing:** Users can input "jailbreak" or "stress-test" prompts.
+- **Categorized Logging:** Failures are stored in `failures.csv` with metadata (Timestamp, Prompt, Response, Category).
+- **Evaluation Categories:** Logic, Safety, and Hallucination.
+
+### Research Reference
+- **Paper:** *Red Teaming Language Models to Identify Toxic Cascades...* (Ganguli et al.)
+- **Concept:** Human-led evaluation is critical for identifying "long-tail" failures that automated benchmarks often miss.
 
 ## Setup
 1. Clone the repository.
